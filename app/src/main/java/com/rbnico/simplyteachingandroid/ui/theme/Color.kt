@@ -14,7 +14,7 @@ val Purple500 = Color(0xFF6200EE)
 val Purple700 = Color(0xFF3700B3)
 val Teal200 = Color(0xFF03DAC5)
 
-val _primaryL = Color(0xFF6200EE)
+val _primaryL = Color(0xFF4040FF)
 val _primaryVariantL = Color(0xFF3700B3)
 val _secondaryL = Color(0xFF03DAC5)
 val _secondaryVariantL = Color(0xFF018786)
@@ -27,7 +27,7 @@ val _onBackgroundL = _onSecondaryL
 val _onSurfaceL = _onBackgroundL
 val _onErrorL = _backgroundL
 
-val _primaryD = Color(0xFFBB86FC)
+val _primaryD = Color(0xFF9090FF)
 val _primaryVariantD = Color(0xFF3700B3)
 val _secondaryD = Color(0xFF03DAC6)
 val _secondaryVariantD = _secondaryD
