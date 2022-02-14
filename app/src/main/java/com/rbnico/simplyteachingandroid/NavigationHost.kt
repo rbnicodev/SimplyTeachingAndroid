@@ -23,7 +23,7 @@ fun NavigationHost() {
             StudentsList()
         }
         composable(Destinations.StudentView.route) {
-            StudentView()
+            StudentView(DataProvider.currentStudent)
         }
     }
 }
