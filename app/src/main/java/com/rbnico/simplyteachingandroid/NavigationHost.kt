@@ -22,10 +22,12 @@ fun NavigationHost() {
             }
         }
         composable(Destinations.StudentsList.route) {
-            StudentsList()
+            StudentsList() {
+                navController.navigate(Destinations.StudentView.route)
+            }
         }
         composable(Destinations.StudentView.route) {
-            StudentView(DataProvider.currentStudent)
+            StudentView()
         }
     }
 }

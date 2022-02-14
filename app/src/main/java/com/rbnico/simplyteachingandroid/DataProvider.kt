@@ -1,13 +1,10 @@
 package com.rbnico.simplyteachingandroid
 
 import androidx.compose.runtime.*
-import androidx.compose.runtime.saveable.rememberSaveable
-import androidx.lifecycle.LiveData
-import kotlin.properties.Delegates
 
 
 object DataProvider {
-    private var _studentsList = listOf(
+     var studentsList = listOf(
         Student(
             "Jacinto",
             "Núñez",
@@ -16,7 +13,10 @@ object DataProvider {
         )
     )
 
-    private var _currentStudent: Student = Student("Nombre","Apellidos",12,1)
-    val currentStudent: Student by mutableStateOf(_currentStudent)
+    var currentStudent: Student = Student("Nombre","Apellidos",12,1)
+    val _currentStudent: Student by mutableStateOf(currentStudent)
+
+    var currentUser: User = User("", "")
+    val _currentUser: User by mutableStateOf(currentUser)
 }
 

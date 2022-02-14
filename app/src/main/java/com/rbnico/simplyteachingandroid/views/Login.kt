@@ -1,15 +1,11 @@
 package com.rbnico.simplyteachingandroid.views
 
-import android.app.Application
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
@@ -22,11 +18,6 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
-import androidx.compose.ui.draw.shadow
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.ColorFilter
-import androidx.compose.ui.graphics.ColorMatrix
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
@@ -36,6 +27,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.annotation.ExperimentalCoilApi
 import coil.compose.rememberImagePainter
+import com.rbnico.simplyteachingandroid.DataProvider
 import com.rbnico.simplyteachingandroid.User
 import com.rbnico.simplyteachingandroid.ui.theme.SimplyTeachingAndroidTheme
 @ExperimentalCoilApi
@@ -44,8 +36,7 @@ fun LoginView(
     loginOnClick : () -> Unit
 ) {
     val _user = remember { mutableStateOf("")}
-    val user = User("", "")
-    var passwordVisibility: MutableState<Boolean> = remember { mutableStateOf(false)}
+        var passwordVisibility: MutableState<Boolean> = remember { mutableStateOf(false)}
 
     val _pass = remember { mutableStateOf("")}
     val logoString = if (isSystemInDarkTheme()) remember{
@@ -104,7 +95,10 @@ fun LoginView(
                 .padding(vertical = 15.dp)
         )
         Button(
-            loginOnClick,
+            {
+                DataProvider.currentUser = User(_user.value, _pass.value)
+                loginOnClick()
+            },
             modifier = Modifier
                 .padding(35.dp)
 
