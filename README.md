@@ -2,7 +2,7 @@
 
 
 
-<img src="https://i.ibb.co/SyY3gY3/Logo-Aplicacion.png" style="zoom:10%;" />
+<img src="https://i.ibb.co/jwjFQbR/Logo-Aplicacion.png" style="zoom:10%;" />
 
 ### Android - Developing
 
