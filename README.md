@@ -17,8 +17,8 @@ By clicking on a student's card, he will be able to access all his data and the 
 The application is under development, so at this time it only has:
 
 - Login screen (Developing)
-- Student list screen(Developing)
-- ~~Student detail screen~~
+- Student list screen (Developing)
+- Student detail screen (Developing)
 - ~~Note detail screen~~
 
 
