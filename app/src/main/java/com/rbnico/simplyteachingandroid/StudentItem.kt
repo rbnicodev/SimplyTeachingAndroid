@@ -7,6 +7,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.Card
+import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
@@ -56,7 +57,7 @@ fun StudentItem(
                     modifier = Modifier
                         .size(50.dp)
                         .clip(CircleShape)
-                        .border(2.dp, Color.Black, CircleShape),
+                        .border(4.dp, MaterialTheme.colors.primary, CircleShape),
                     contentScale = ContentScale.Crop,
                 )
                 Text(
@@ -64,11 +65,6 @@ fun StudentItem(
                     modifier = Modifier.padding(start = 20.dp),
                     fontWeight = FontWeight.Bold
                 )
-//                Text(
-//                    text = ,
-//                    modifier = Modifier.padding(start = 5.dp),
-//                    fontWeight = FontWeight.Bold
-//                )
             }
             Row(
                 verticalAlignment = Alignment.CenterVertically,

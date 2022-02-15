@@ -6,6 +6,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import coil.annotation.ExperimentalCoilApi
 import com.rbnico.simplyteachingandroid.views.LoginView
+import com.rbnico.simplyteachingandroid.views.NoteView
 import com.rbnico.simplyteachingandroid.views.StudentView
 import com.rbnico.simplyteachingandroid.views.StudentsList
 
@@ -27,7 +28,12 @@ fun NavigationHost() {
             }
         }
         composable(Destinations.StudentView.route) {
-            StudentView()
+            StudentView() {
+                navController.navigate(Destinations.NoteView.route)
+            }
+        }
+        composable(Destinations.NoteView.route) {
+            NoteView()
         }
     }
 }

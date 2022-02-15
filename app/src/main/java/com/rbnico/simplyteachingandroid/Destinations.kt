@@ -6,4 +6,5 @@ sealed class Destinations (
     object StudentsList: Destinations("studentsList")
     object StudentView: Destinations("studentVew")
     object LoginView: Destinations("loginView")
+    object NoteView: Destinations("noteView")
 }

@@ -10,7 +10,7 @@ object DataProvider {
             "Núñez",
             12,
             2,
-            listOf(Note(0, "")),
+            listOf(Note(15022022, "Se ha portado muy mal y no sabe cómo hacer la tarea")),
             ""
         ),
          Student(
@@ -18,7 +18,7 @@ object DataProvider {
              "Sáez",
              7,
              1,
-             listOf(Note(0, "")),
+             listOf(),
              ""
          ),
          Student(
@@ -26,7 +26,7 @@ object DataProvider {
              "Anacardo",
              6,
              1,
-             listOf(Note(0, "")),
+             listOf(),
              ""
          ),
          Student(
@@ -34,7 +34,7 @@ object DataProvider {
              "Sánchez",
              16,
              5,
-             listOf(Note(0, "")),
+             listOf(),
              ""
          ),
          Student(
@@ -42,7 +42,7 @@ object DataProvider {
              "Forever",
              12,
              4,
-             listOf(Note(0, "")),
+             listOf(),
              ""
          ),
          Student(
@@ -50,15 +50,17 @@ object DataProvider {
              "Langostino",
              11,
              2,
-             listOf(Note(0, "")),
+             listOf(),
              ""
          )
     )
 
     var currentStudent: Student = Student("Nombre","Apellidos",12,1, listOf(Note(0, "")), "")
-    val _currentStudent: Student by mutableStateOf(currentStudent)
 
     var currentUser: User = User("", "")
     val _currentUser: User by mutableStateOf(currentUser)
+
+    var currentNote: Note = Note(0, "")
+    val _currentNote: Note by mutableStateOf(currentNote)
 }
 
