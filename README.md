@@ -17,13 +17,21 @@ By clicking on a student's card, he will be able to access all his data and the 
 The application is under development, so at this time it only has:
 
 - Login screen (Developing)
-- ~~Student list screen~~
+- Student list screen(Developing)
 - ~~Student detail screen~~
+- ~~Note detail screen~~
 
 
 
-###### Actual state:
+###### Login Screen -> Actual state:
 
 <img src="https://i.ibb.co/yNhnjtQ/login-Screen.png" alt="https://i.ibb.co/yNhnjtQ/login-Screen.png" style="zoom: 50%;" />
 
 <img src="https://i.ibb.co/kcJTyPR/login-Screen-Light.png" alt="login-Screen-Light" border="0" style="zoom:50%;" >
+
+###### Student List Screen -> Actual state:
+
+<img src="" alt="https://i.ibb.co/PrDcmnV/student-List-Screen-D.png" style="zoom: 50%;" />
+
+<img src="https://i.ibb.co/9tdzJPP/student-List-Screen.png" alt="login-Screen-Light" border="0" style="zoom:50%;" >
+
