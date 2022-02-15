@@ -30,6 +30,7 @@ fun StudentView(
             Button(
                 {
                     DataProvider.newNote = true
+                    DataProvider.currentNote = Note(0, "")
                     noteClick()
                 },
                 modifier = Modifier
@@ -50,6 +51,7 @@ fun StudentView(
             verticalArrangement = Arrangement.spacedBy(8.dp)) {
             items(notes) {
                     note -> NoteItem(note) {
+                        DataProvider.currentNote = note
                         DataProvider.newNote = false
                         noteClick()
                     }

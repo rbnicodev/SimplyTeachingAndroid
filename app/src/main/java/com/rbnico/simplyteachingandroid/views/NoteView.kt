@@ -10,10 +10,8 @@ import com.rbnico.simplyteachingandroid.Note
 @Composable
 fun NoteView(
 ) {
-
-    val note: Note = if(DataProvider.newNote) Note(0, "") else DataProvider.currentNote
+    val note: Note = DataProvider.currentNote
     var noteString by remember { mutableStateOf(DataProvider.currentNote.note)}
-    val onTextFieldChange =
     Column() {
         TextField(
             value = noteString,

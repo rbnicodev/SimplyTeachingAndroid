@@ -19,7 +19,7 @@ fun NavigationHost() {
     val navController = rememberNavController()
     val textFieldNote = remember{ mutableStateOf(DataProvider.currentNote.note)}
 
-    NavHost(navController = navController, startDestination = Destinations.StudentsList.route){
+    NavHost(navController = navController, startDestination = Destinations.LoginView.route){
         composable(Destinations.LoginView.route) {
             LoginView() {
                 navController.navigate(Destinations.StudentsList.route)
