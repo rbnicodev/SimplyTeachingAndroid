@@ -11,14 +11,17 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import coil.annotation.ExperimentalCoilApi
 import com.rbnico.simplyteachingandroid.*
 import com.rbnico.simplyteachingandroid.data.DataProvider
 import com.rbnico.simplyteachingandroid.data.Note
 import com.rbnico.simplyteachingandroid.data.Student
 
+@ExperimentalCoilApi
 @Composable
 fun StudentView(
-    noteClick: () -> Unit
+    noteClick: () -> Unit,
+    studentClick: () -> Unit
 ){
     val student: Student = DataProvider.currentStudent
     val notes: List<Note> = student.notes
@@ -26,7 +29,10 @@ fun StudentView(
     Column(
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        StudentItem(student) {}
+        StudentItem(student) {
+            DataProvider.newStudent = false
+            studentClick()
+        }
         Box(
             modifier = Modifier.padding(bottom = 10.dp)
         ) {

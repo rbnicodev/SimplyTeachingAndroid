@@ -26,7 +26,7 @@ import com.rbnico.simplyteachingandroid.data.Student
 @Composable
 fun StudentItem(
     student: Student,
-    click: (Student) -> Unit
+    click: () -> Unit
 ) {
     val photoString = if (student.photo.length>2)
         remember {mutableStateOf(student.photo)}
@@ -38,7 +38,7 @@ fun StudentItem(
             .wrapContentHeight()
             .clickable {
                 DataProvider.currentStudent = student
-                click(student)
+                click()
             }
 
     ) {

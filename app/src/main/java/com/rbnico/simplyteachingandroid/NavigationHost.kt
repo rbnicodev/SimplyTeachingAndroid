@@ -8,10 +8,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import coil.annotation.ExperimentalCoilApi
 import com.rbnico.simplyteachingandroid.data.DataProvider
-import com.rbnico.simplyteachingandroid.views.LoginView
-import com.rbnico.simplyteachingandroid.views.NoteView
-import com.rbnico.simplyteachingandroid.views.StudentView
-import com.rbnico.simplyteachingandroid.views.StudentsList
+import com.rbnico.simplyteachingandroid.views.*
 
 
 @ExperimentalCoilApi
@@ -22,22 +19,30 @@ fun NavigationHost() {
 
     NavHost(navController = navController, startDestination = Destinations.LoginView.route){
         composable(Destinations.LoginView.route) {
-            LoginView() {
-                navController.navigate(Destinations.StudentsList.route)
-            }
+            LoginView(
+                loginOnClick = {navController.navigate(Destinations.StudentsList.route)}
+            )
         }
         composable(Destinations.StudentsList.route) {
-            StudentsList() {
-                navController.navigate(Destinations.StudentView.route)
-            }
+            StudentsList(
+                studentClick = {navController.navigate(Destinations.StudentView.route)},
+                addStudentClick = {navController.navigate(Destinations.StudentAddView.route)}
+            )
         }
         composable(Destinations.StudentView.route) {
-            StudentView() {
-                navController.navigate(Destinations.NoteView.route)
-            }
+            StudentView(
+                noteClick = {navController.navigate(Destinations.NoteView.route)},
+                studentClick = {navController.navigate(Destinations.StudentAddView.route)}
+            )
         }
         composable(Destinations.NoteView.route) {
             NoteView()
+        }
+
+        composable(Destinations.StudentAddView.route) {
+            StudentAddView(
+                saveClick = {navController.navigate(Destinations.StudentView.route)}
+            )
         }
     }
 }

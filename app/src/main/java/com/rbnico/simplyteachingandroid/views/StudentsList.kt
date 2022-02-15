@@ -20,7 +20,8 @@ import com.rbnico.simplyteachingandroid.data.User
 @ExperimentalCoilApi
 @Composable
 fun StudentsList(
-    click: (Student) -> Unit
+    studentClick: () -> Unit,
+    addStudentClick: () -> Unit
 ){
     val user: User = DataProvider._currentUser
     val students: List<Student> = DataProvider.studentsList
@@ -33,8 +34,8 @@ fun StudentsList(
         ) {
             Button(
                 {
-                    DataProvider.newNote = true
-//            noteClick()
+                    DataProvider.newStudent = true
+                    addStudentClick()
                 },
                 modifier = Modifier
                     .padding(top = 20.dp)
@@ -56,7 +57,7 @@ fun StudentsList(
             verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
             items(students) {
-                    student -> StudentItem(student, click)
+                    student -> StudentItem(student, studentClick)
             }
         }
     }

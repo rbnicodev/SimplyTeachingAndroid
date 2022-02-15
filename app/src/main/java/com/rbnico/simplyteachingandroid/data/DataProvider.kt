@@ -63,5 +63,6 @@ object DataProvider {
     var currentNote: Note = Note(0, "")
 
     var newNote: Boolean = true
+    var newStudent: Boolean = true
 }
 
