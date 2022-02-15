@@ -20,7 +20,7 @@ fun NoteItem(
     click: () -> Unit
 ) {
     val day: String = (note.date/1000000).toString()
-    val month: String = ((note.date/10000)%1500).toString()
+    val month: String = ((note.date/10000)%100).toString()
     val year: String = ((note.date)%10000).toString()
     Card(
         elevation = 5.dp,
@@ -37,7 +37,7 @@ fun NoteItem(
             horizontalAlignment = Alignment.CenterHorizontally,
             modifier = Modifier.padding(all = 20.dp)
         ) {
-            Text(modifier = Modifier.padding(bottom = 15.dp),text = day + "/ " + month + "/ " + year)
+            Text(modifier = Modifier.padding(bottom = 15.dp),text = day + " / " + month + " / " + year)
             Text(note.note)
         }
 

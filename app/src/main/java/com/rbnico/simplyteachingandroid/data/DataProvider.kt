@@ -10,7 +10,7 @@ object DataProvider {
             "Núñez",
             12,
             2,
-            listOf(Note(15022022, "Se ha portado muy mal y no sabe cómo hacer la tarea")),
+            listOf(Note(13112021, "Se ha portado muy mal y no sabe cómo hacer la tarea")),
             ""
         ),
          Student(
