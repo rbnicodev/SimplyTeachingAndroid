@@ -4,7 +4,6 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.Button
-import androidx.compose.material.Card
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
@@ -13,10 +12,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.annotation.ExperimentalCoilApi
-import com.rbnico.simplyteachingandroid.DataProvider
-import com.rbnico.simplyteachingandroid.Student
+import com.rbnico.simplyteachingandroid.data.DataProvider
+import com.rbnico.simplyteachingandroid.data.Student
 import com.rbnico.simplyteachingandroid.StudentItem
-import com.rbnico.simplyteachingandroid.User
+import com.rbnico.simplyteachingandroid.data.User
 
 @ExperimentalCoilApi
 @Composable

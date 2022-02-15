@@ -27,8 +27,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.annotation.ExperimentalCoilApi
 import coil.compose.rememberImagePainter
-import com.rbnico.simplyteachingandroid.DataProvider
-import com.rbnico.simplyteachingandroid.User
+import com.rbnico.simplyteachingandroid.data.DataProvider
+import com.rbnico.simplyteachingandroid.data.User
 import com.rbnico.simplyteachingandroid.ui.theme.SimplyTeachingAndroidTheme
 @ExperimentalCoilApi
 @Composable

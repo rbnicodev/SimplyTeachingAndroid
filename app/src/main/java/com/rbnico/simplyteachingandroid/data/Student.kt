@@ -1,4 +1,6 @@
-package com.rbnico.simplyteachingandroid
+package com.rbnico.simplyteachingandroid.data
+
+import com.rbnico.simplyteachingandroid.data.Note
 
 data class Student (
     val name: String,

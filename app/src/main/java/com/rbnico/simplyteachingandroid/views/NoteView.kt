@@ -4,8 +4,8 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.material.Text
 import androidx.compose.material.TextField
 import androidx.compose.runtime.*
-import com.rbnico.simplyteachingandroid.DataProvider
-import com.rbnico.simplyteachingandroid.Note
+import com.rbnico.simplyteachingandroid.data.DataProvider
+import com.rbnico.simplyteachingandroid.data.Note
 
 @Composable
 fun NoteView(

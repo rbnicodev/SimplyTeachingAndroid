@@ -1,4 +1,4 @@
-package com.rbnico.simplyteachingandroid
+package com.rbnico.simplyteachingandroid.data
 
 import java.time.chrono.ChronoLocalDateTime
 
