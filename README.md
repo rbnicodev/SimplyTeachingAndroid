@@ -31,7 +31,14 @@ The application is under development, so at this time it only has:
 
 ###### Student List Screen -> Actual state:
 
-<img src="https://i.ibb.co/PrDcmnV/student-List-Screen-D.png" style="zoom: 50%;" />
+<img src="https://github.com/rubenmsanchis/SimplyTeachingAndroid/blob/master/images/studentListD.png?raw=true" style="zoom: 50%;" />
 
-<img src="https://i.ibb.co/9tdzJPP/student-List-Screen.png" alt="login-Screen-Light" border="0" style="zoom:50%;" >
+<img src="https://github.com/rubenmsanchis/SimplyTeachingAndroid/blob/master/images/studentListL.png?raw=true" border="0" style="zoom:50%;" >
+
+###### Student View Screen -> Actual state:
+
+<img src="https://github.com/rubenmsanchis/SimplyTeachingAndroid/blob/master/images/studentViewD.png?raw=true" style="zoom: 50%;" />
+
+<img src="https://github.com/rubenmsanchis/SimplyTeachingAndroid/blob/master/images/studentViewL.png?raw=true" border="0" style="zoom:50%;" >
+
 
