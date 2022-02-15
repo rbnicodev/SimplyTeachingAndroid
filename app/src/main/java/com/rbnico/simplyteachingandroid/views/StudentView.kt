@@ -1,9 +1,6 @@
 package com.rbnico.simplyteachingandroid.views
 
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.Button
@@ -27,28 +24,37 @@ fun StudentView(
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         StudentItem(student) {}
+        Box(
+            modifier = Modifier.padding(bottom = 10.dp)
+        ) {
+            Button(
+                {
+                    DataProvider.newNote = true
+                    noteClick()
+                },
+                modifier = Modifier
+                    .padding(top = 20.dp)
+                    .fillMaxWidth(0.8f)
+
+            ) {
+                Text(
+                    text = "Añadir nota",
+                    modifier = Modifier
+                        .padding(8.dp, 2.dp),
+                    style = MaterialTheme.typography.button,
+                    fontSize = 15.sp
+                )
+            }
+        }
         LazyColumn( contentPadding = PaddingValues(horizontal = 16.dp, vertical = 16.dp),
             verticalArrangement = Arrangement.spacedBy(8.dp)) {
             items(notes) {
-                    note -> NoteItem(note) {noteClick() }
+                    note -> NoteItem(note) {
+                        DataProvider.newNote = false
+                        noteClick()
+                    }
             }
         }
-        Button(
-            {
-//                DataProvider.currentNote = Note(0, "")
-                noteClick()
-            },
-            modifier = Modifier
-                .padding(35.dp)
 
-        ) {
-            Text(
-                text = "Añadir nota",
-                modifier = Modifier
-                    .padding(15.dp, 5.dp),
-                style = MaterialTheme.typography.button,
-                fontSize = 20.sp
-            )
-        }
     }
 }

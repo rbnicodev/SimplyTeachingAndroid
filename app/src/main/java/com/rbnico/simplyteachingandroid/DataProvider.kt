@@ -61,6 +61,7 @@ object DataProvider {
     val _currentUser: User by mutableStateOf(currentUser)
 
     var currentNote: Note = Note(0, "")
-    val _currentNote: Note by mutableStateOf(currentNote)
+
+    var newNote: Boolean = true
 }
 

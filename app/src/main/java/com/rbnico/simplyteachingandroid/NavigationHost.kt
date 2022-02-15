@@ -1,6 +1,8 @@
 package com.rbnico.simplyteachingandroid
 
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
@@ -15,8 +17,9 @@ import com.rbnico.simplyteachingandroid.views.StudentsList
 @Composable
 fun NavigationHost() {
     val navController = rememberNavController()
+    val textFieldNote = remember{ mutableStateOf(DataProvider.currentNote.note)}
 
-    NavHost(navController = navController, startDestination = Destinations.LoginView.route){
+    NavHost(navController = navController, startDestination = Destinations.StudentsList.route){
         composable(Destinations.LoginView.route) {
             LoginView() {
                 navController.navigate(Destinations.StudentsList.route)
