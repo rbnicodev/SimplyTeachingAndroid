@@ -31,7 +31,7 @@ The application is under development, so at this time it only has:
 
 ###### Student List Screen -> Actual state:
 
-<img src="" alt="https://i.ibb.co/PrDcmnV/student-List-Screen-D.png" style="zoom: 50%;" />
+<img src="https://i.ibb.co/PrDcmnV/student-List-Screen-D.png" style="zoom: 50%;" />
 
 <img src="https://i.ibb.co/9tdzJPP/student-List-Screen.png" alt="login-Screen-Light" border="0" style="zoom:50%;" >
 
