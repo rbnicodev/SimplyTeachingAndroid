@@ -27,18 +27,27 @@ The application is under development, so at this time it only has:
 
 <img src="https://i.ibb.co/yNhnjtQ/login-Screen.png" alt="https://i.ibb.co/yNhnjtQ/login-Screen.png" style="zoom: 50%;" />
 
-<img src="https://i.ibb.co/kcJTyPR/login-Screen-Light.png" alt="login-Screen-Light" border="0" style="zoom:50%;" >
+<img src="https://i.ibb.co/kcJTyPR/login-Screen-Light.png" alt="login-Screen-Light" style="zoom:50%;" >
 
 ###### Student List Screen -> Actual state:
 
 <img src="https://github.com/rubenmsanchis/SimplyTeachingAndroid/blob/master/images/studentListD.png?raw=true" style="zoom: 50%;" />
 
-<img src="https://github.com/rubenmsanchis/SimplyTeachingAndroid/blob/master/images/studentListL.png?raw=true" border="0" style="zoom:50%;" >
+<img src="https://github.com/rubenmsanchis/SimplyTeachingAndroid/blob/master/images/studentListL.png?raw=true" style="zoom:50%;" >
 
 ###### Student View Screen -> Actual state:
 
 <img src="https://github.com/rubenmsanchis/SimplyTeachingAndroid/blob/master/images/studentViewD.png?raw=true" style="zoom: 50%;" />
 
-<img src="https://github.com/rubenmsanchis/SimplyTeachingAndroid/blob/master/images/studentViewL.png?raw=true" border="0" style="zoom:50%;" >
+<img src="https://github.com/rubenmsanchis/SimplyTeachingAndroid/blob/master/images/studentViewL.png?raw=true" style="zoom:50%;" >
+
+###### Note View Screen -> Actual state:
+
+<img src="https://github.com/rubenmsanchis/SimplyTeachingAndroid/blob/master/images/noteViewD.png?raw=true" style="zoom: 50%;" />
+
+<img src="https://github.com/rubenmsanchis/SimplyTeachingAndroid/blob/master/images/noteViewL.png?raw=true" style="zoom:50%;" >
+
+
+
 
 
