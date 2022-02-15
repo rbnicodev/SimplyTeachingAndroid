@@ -46,17 +46,10 @@ fun LoginView(
     }
     Column(
         modifier = Modifier
-            .fillMaxWidth(),
+            .fillMaxWidth()
+            .padding(top = 20.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Image(
-            painter = rememberImagePainter(logoString.value),
-            contentDescription = "LogoApp",
-            modifier = Modifier
-                .padding(vertical = 15.dp)
-                .size(280.dp),
-            contentScale = ContentScale.Fit,
-        )
         Text(
             text = "Usuario",
             fontSize = 30.sp
@@ -111,6 +104,14 @@ fun LoginView(
                 fontSize = 20.sp
             )
         }
+        Image(
+            painter = rememberImagePainter(logoString.value),
+            contentDescription = "LogoApp",
+            modifier = Modifier
+                .padding(vertical = 15.dp)
+                .size(280.dp),
+            contentScale = ContentScale.Fit,
+        )
     }
 }
 

@@ -6,6 +6,7 @@ import androidx.compose.material.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.rbnico.simplyteachingandroid.data.DataProvider
@@ -33,10 +34,9 @@ fun NoteView(
     var noteString by remember { mutableStateOf(note.note) }
 
     Card(
-        elevation = 5.dp,
+        elevation = 20.dp,
         modifier = Modifier
             .padding(all = 20.dp)
-            .padding(top = 50.dp)
             .fillMaxWidth()
             .wrapContentHeight()
 
@@ -44,12 +44,15 @@ fun NoteView(
         Column(
             modifier = Modifier
                 .padding(all = 20.dp)
-                .fillMaxWidth(),
-            horizontalAlignment = Alignment.CenterHorizontally
+                .fillMaxWidth()
+                .fillMaxHeight(),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.SpaceAround
         ) {
             Text(
                 modifier = Modifier.padding(bottom = 15.dp),
-                text = Day + " / " + Month + " / " + Year
+                text = Day + " / " + Month + " / " + Year,
+                fontWeight = FontWeight.Bold
             )
             TextField(
                 value = noteString,

@@ -32,7 +32,8 @@ fun NavigationHost() {
         composable(Destinations.StudentView.route) {
             StudentView(
                 noteClick = {navController.navigate(Destinations.NoteView.route)},
-                studentClick = {navController.navigate(Destinations.StudentAddView.route)}
+                studentClick = {navController.navigate(Destinations.StudentAddView.route)},
+                backClick = { navController.navigate(Destinations.StudentsList.route)}
             )
         }
         composable(Destinations.NoteView.route) {
