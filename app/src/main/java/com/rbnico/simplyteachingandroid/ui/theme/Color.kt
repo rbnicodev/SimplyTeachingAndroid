@@ -5,6 +5,9 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.State
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.ui.graphics.Color
 
 
@@ -13,6 +16,9 @@ val Purple200 = Color(0xFFBB86FC)
 val Purple500 = Color(0xFF6200EE)
 val Purple700 = Color(0xFF3700B3)
 val Teal200 = Color(0xFF03DAC5)
+
+val _cardD = Color(0xFF005997)
+val _cardL = Color(0xFFbee4ff)
 
 val _primaryL = Color(0xFF4040FF)
 val _primaryVariantL = Color(0xFF3700B3)
@@ -40,6 +46,7 @@ val _onBackgroundD = Color(0xFFFFFFFF)
 val _onSurfaceD= _onBackgroundD
 val _onErrorD = Color(0xFF000000)
 
+var cardColor: Color = _cardL
 
 private val LightColors = lightColors(
     primary = _primaryL,
@@ -78,6 +85,7 @@ fun MyTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     content: @Composable () -> Unit
 ) {
+    cardColor = if(darkTheme) _cardD else _cardL
     MaterialTheme(
         colors = if (darkTheme) DarkColors else LightColors,
         /*...*/

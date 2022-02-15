@@ -3,6 +3,8 @@ package com.rbnico.simplyteachingandroid
 data class Student (
     val name: String,
     val lastName: String,
-    val years: Int,
-    val course: Int
+    val age: Int,
+    val course: Int,
+    val notes: List<Note>,
+    val photo: String
 )
