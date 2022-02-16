@@ -16,7 +16,7 @@ import com.rbnico.simplyteachingandroid.model.StudentsProvider
 fun StudentAddView(
     saveClick: () -> Unit
 ) {
-    val student: Student = if(StudentsProvider.newStudent) Student(100,"","",0,0, listOf(),"") else StudentsProvider.currentStudent
+    val student: Student = if(StudentsProvider.newStudent) Student("","",0,0, listOf(),"") else StudentsProvider.currentStudent
     var name by remember{ mutableStateOf(student.name)}
     var lastName by remember{ mutableStateOf(student.lastName)}
     val age: MutableState<String>

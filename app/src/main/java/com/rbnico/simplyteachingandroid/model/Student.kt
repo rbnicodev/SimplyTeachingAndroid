@@ -1,15 +1,11 @@
 package com.rbnico.simplyteachingandroid.model
 
-import androidx.room.Entity
-import androidx.room.PrimaryKey
 
-@Entity
 data class Student (
-    @PrimaryKey val uid: Int,
-    val name: String,
-    val lastName: String?,
-    val age: Int?,
-    val course: Int?,
-    val notes: List<Note>?,
-    val photo: String?
+    var name: String,
+    var lastName: String?,
+    var age: Int?,
+    var course: Int?,
+    var notes: List<Note>?,
+    var photo: String?
 )

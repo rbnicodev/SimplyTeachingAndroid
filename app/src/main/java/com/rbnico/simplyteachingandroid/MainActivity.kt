@@ -7,12 +7,14 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.room.Room
 import coil.annotation.ExperimentalCoilApi
+import com.rbnico.simplyteachingandroid.model.DataProvider
 import com.rbnico.simplyteachingandroid.ui.theme.MyTheme
 import com.rbnico.simplyteachingandroid.ui.theme.SimplyTeachingAndroidTheme
 
 class MainActivity : ComponentActivity() {
-    @ExperimentalCoilApi
+
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
