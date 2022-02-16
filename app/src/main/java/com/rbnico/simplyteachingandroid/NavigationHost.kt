@@ -44,7 +44,7 @@ fun NavigationHost() {
 
         composable(Destinations.StudentAddView.route) {
             StudentAddView(
-                saveClick = {navController.navigate(Destinations.StudentView.route)}
+                saveClick = {navController.navigate(Destinations.StudentsList.route)}
             )
         }
     }

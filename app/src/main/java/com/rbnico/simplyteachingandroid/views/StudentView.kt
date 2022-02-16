@@ -60,9 +60,11 @@ fun StudentView(
                 )
             }
         }
-        LazyColumn( contentPadding = PaddingValues(horizontal = 16.dp, vertical = 16.dp),
-            reverseLayout= true,
-            verticalArrangement = Arrangement.spacedBy(8.dp)) {
+        LazyColumn(
+            contentPadding = PaddingValues(horizontal = 16.dp, vertical = 16.dp),
+            reverseLayout = true,
+            verticalArrangement = Arrangement.spacedBy(8.dp)
+        ) {
             items(notes) {
                     note -> NoteItem(note) {
                         DataProvider.currentNote = note
