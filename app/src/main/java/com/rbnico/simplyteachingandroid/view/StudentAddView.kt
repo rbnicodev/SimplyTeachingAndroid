@@ -10,16 +10,28 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.rbnico.simplyteachingandroid.model.DataProvider
 import com.rbnico.simplyteachingandroid.model.Student
+import com.rbnico.simplyteachingandroid.model.StudentsProvider
 
 @Composable
 fun StudentAddView(
     saveClick: () -> Unit
 ) {
-    val student: Student = Student("","",0,0, listOf(),"")
+    val student: Student = if(StudentsProvider.newStudent) Student(100,"","",0,0, listOf(),"") else StudentsProvider.currentStudent
     var name by remember{ mutableStateOf(student.name)}
     var lastName by remember{ mutableStateOf(student.lastName)}
-    var age by remember{ mutableStateOf("")}
-    var course by remember{ mutableStateOf("")}
+    val age: MutableState<String>
+    var sAge = ""
+    var sCourse = ""
+    val course: MutableState<String>
+    if(StudentsProvider.newStudent) {
+        age = remember { mutableStateOf("")}
+        course = remember { mutableStateOf("")}
+    } else {
+        sAge = student.age.toString()
+        sCourse = student.course.toString()
+        age = remember { mutableStateOf(sAge)}
+        course = remember {mutableStateOf(sCourse)}
+    }
 
 
     Column(
@@ -52,16 +64,16 @@ fun StudentAddView(
                 Text("Nombre")
                 TextField(value = name, onValueChange = {name = it})
                 Text("Apellidos")
-                TextField(value = lastName, onValueChange = {lastName = it})
+                lastName?.let { TextField(value = it, onValueChange = {lastName = it}) }
                 Text("Edad")
-                TextField(value = age, onValueChange = {age = it})
+                TextField(value = age.value, onValueChange = {age.value = it})
                 Text("Curso")
-                TextField(value = course, onValueChange = {course = it})
+                TextField(value = course.value, onValueChange = {course.value = it})
             }
         }
         Button(
             {
-                DataProvider.newStudent = false
+                StudentsProvider.newStudent = false
                 saveClick()
             },
             modifier = Modifier

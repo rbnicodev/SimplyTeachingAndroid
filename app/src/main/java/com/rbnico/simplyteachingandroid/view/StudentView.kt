@@ -12,10 +12,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.annotation.ExperimentalCoilApi
+import com.rbnico.simplyteachingandroid.StudentItem
 import com.rbnico.simplyteachingandroid.*
 import com.rbnico.simplyteachingandroid.model.DataProvider
 import com.rbnico.simplyteachingandroid.model.Note
 import com.rbnico.simplyteachingandroid.model.Student
+import com.rbnico.simplyteachingandroid.model.StudentsProvider
 
 @ExperimentalCoilApi
 @Composable
@@ -24,14 +26,14 @@ fun StudentView(
     studentClick: () -> Unit,
     backClick: () -> Unit
 ){
-    val student: Student = DataProvider.currentStudent
-    val notes: List<Note> = student.notes
+    val student: Student = StudentsProvider.currentStudent
+    val notes: List<Note> = student.notes!!
 
     Column(
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         StudentItem(student) {
-            DataProvider.newStudent = false
+            StudentsProvider.newStudent = false
             studentClick()
         }
         Box(

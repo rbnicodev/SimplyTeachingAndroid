@@ -29,6 +29,7 @@ import coil.annotation.ExperimentalCoilApi
 import coil.compose.rememberImagePainter
 import com.rbnico.simplyteachingandroid.model.DataProvider
 import com.rbnico.simplyteachingandroid.model.User
+import com.rbnico.simplyteachingandroid.model.UsersProvider
 import com.rbnico.simplyteachingandroid.ui.theme.SimplyTeachingAndroidTheme
 @ExperimentalCoilApi
 @Composable
@@ -89,7 +90,7 @@ fun LoginView(
         )
         Button(
             {
-                DataProvider.currentUser = User(_user.value, _pass.value)
+                UsersProvider.currentUser = User(_user.value, _pass.value)
                 loginOnClick()
             },
             modifier = Modifier
@@ -115,14 +116,3 @@ fun LoginView(
     }
 }
 
-
-
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview() {
-    SimplyTeachingAndroidTheme {
-        Surface() {
-            LoginView({})
-        }
-    }
-}

@@ -21,6 +21,7 @@ import coil.annotation.ExperimentalCoilApi
 import coil.compose.rememberImagePainter
 import com.rbnico.simplyteachingandroid.model.DataProvider
 import com.rbnico.simplyteachingandroid.model.Student
+import com.rbnico.simplyteachingandroid.model.StudentsProvider
 
 @ExperimentalCoilApi
 @Composable
@@ -28,7 +29,7 @@ fun StudentItem(
     student: Student,
     click: () -> Unit
 ) {
-    val photoString = if (student.photo.length>2)
+    val photoString = if (student.photo?.length!! > 2)
         remember {mutableStateOf(student.photo)}
     else remember {mutableStateOf("https://icon-library.com/images/generic-user-icon/generic-user-icon-19.jpg")}
     Card(
@@ -37,7 +38,7 @@ fun StudentItem(
             .fillMaxWidth()
             .wrapContentHeight()
             .clickable {
-                DataProvider.currentStudent = student
+                StudentsProvider.currentStudent = student
                 click()
             }
 

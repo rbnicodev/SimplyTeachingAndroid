@@ -2,7 +2,7 @@ package com.rbnico.simplyteachingandroid.model
 
 object StudentsProvider {
     val studentsList: List<Student> = listOf(
-        Student(
+        Student(5, 
             "Jacinto",
             "Núñez",
             12,
@@ -27,7 +27,7 @@ object StudentsProvider {
             ),
             ""
         ),
-        Student(
+        Student(4,
             "Eustaquio",
             "Sáez",
             7,
@@ -35,7 +35,7 @@ object StudentsProvider {
             listOf(),
             ""
         ),
-        Student(
+        Student(3,
             "Eneldo",
             "Anacardo",
             6,
@@ -43,7 +43,7 @@ object StudentsProvider {
             listOf(),
             ""
         ),
-        Student(
+        Student(2,
             "Ovidio",
             "Sánchez",
             16,
@@ -51,7 +51,7 @@ object StudentsProvider {
             listOf(),
             ""
         ),
-        Student(
+        Student(1,
             "Nicasio",
             "Forever",
             12,
@@ -59,18 +59,13 @@ object StudentsProvider {
             listOf(),
             ""
         ),
-        Student(
-            "Rigodolfo",
-            "Langostino",
-            11,
-            2,
-            listOf(),
-            ""
-        )
+        Student(0, name = "Eladio", "", 9, 2, listOf(), "")
     )
 
-    fun get(): List<Student> {return studentsList}
+    fun getAll(): List<Student> {return studentsList}
 
-    var currentStudent: Student = Student("Nombre","Apellidos",12,1, listOf(Note(0, "")), "")
+    lateinit var currentStudent: Student
+
+    var newStudent: Boolean = true
 
 }
