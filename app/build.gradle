@@ -77,5 +77,10 @@ dependencies {
     //noinspection GradleDependency
     debugImplementation "androidx.compose.ui:ui-tooling:$compose_version"
 
+    //MVVM
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1' // componente viewModel
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.1' // componente liveData
+    implementation 'androidx.activity:activity-ktx:1.4.0' // relación viewModel-activity
+    implementation 'androidx.fragment:fragment-ktx:1.4.1' // relación viewModel-fragments
 
 }

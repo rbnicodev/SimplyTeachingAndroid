@@ -7,8 +7,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import coil.annotation.ExperimentalCoilApi
-import com.rbnico.simplyteachingandroid.data.DataProvider
-import com.rbnico.simplyteachingandroid.views.*
+import com.rbnico.simplyteachingandroid.model.DataProvider
+import com.rbnico.simplyteachingandroid.view.*
 
 
 @ExperimentalCoilApi

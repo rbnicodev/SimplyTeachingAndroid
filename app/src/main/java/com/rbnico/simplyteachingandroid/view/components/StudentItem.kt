@@ -19,8 +19,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import coil.annotation.ExperimentalCoilApi
 import coil.compose.rememberImagePainter
-import com.rbnico.simplyteachingandroid.data.DataProvider
-import com.rbnico.simplyteachingandroid.data.Student
+import com.rbnico.simplyteachingandroid.model.DataProvider
+import com.rbnico.simplyteachingandroid.model.Student
 
 @ExperimentalCoilApi
 @Composable

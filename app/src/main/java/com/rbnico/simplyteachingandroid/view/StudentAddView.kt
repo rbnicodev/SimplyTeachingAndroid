@@ -1,4 +1,4 @@
-package com.rbnico.simplyteachingandroid.views
+package com.rbnico.simplyteachingandroid.view
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
@@ -8,9 +8,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.rbnico.simplyteachingandroid.data.DataProvider
-import com.rbnico.simplyteachingandroid.data.Note
-import com.rbnico.simplyteachingandroid.data.Student
+import com.rbnico.simplyteachingandroid.model.DataProvider
+import com.rbnico.simplyteachingandroid.model.Student
 
 @Composable
 fun StudentAddView(

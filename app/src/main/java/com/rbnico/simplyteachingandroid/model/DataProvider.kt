@@ -1,4 +1,4 @@
-package com.rbnico.simplyteachingandroid.data
+package com.rbnico.simplyteachingandroid.model
 
 import androidx.compose.runtime.*
 

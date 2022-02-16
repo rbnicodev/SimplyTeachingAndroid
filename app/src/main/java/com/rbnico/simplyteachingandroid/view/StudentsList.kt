@@ -1,4 +1,4 @@
-package com.rbnico.simplyteachingandroid.views
+package com.rbnico.simplyteachingandroid.view
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -11,11 +11,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.lifecycle.viewmodel.compose.viewModel
 import coil.annotation.ExperimentalCoilApi
-import com.rbnico.simplyteachingandroid.data.DataProvider
-import com.rbnico.simplyteachingandroid.data.Student
+import com.rbnico.simplyteachingandroid.model.DataProvider
+import com.rbnico.simplyteachingandroid.model.Student
 import com.rbnico.simplyteachingandroid.StudentItem
-import com.rbnico.simplyteachingandroid.data.User
+import com.rbnico.simplyteachingandroid.model.User
+import com.rbnico.simplyteachingandroid.vewmodel.StudentsViewModel
 
 @ExperimentalCoilApi
 @Composable
@@ -23,8 +25,10 @@ fun StudentsList(
     studentClick: () -> Unit,
     addStudentClick: () -> Unit
 ){
+    val studentsViewModel: StudentsViewModel = StudentsViewModel()
     val user: User = DataProvider._currentUser
-    val students: List<Student> = DataProvider.studentsList
+//    val students: List<Student> = studentsViewModel.studentsLiveData.value!!
+    var students = DataProvider.studentsList
 
     Column(
         horizontalAlignment = Alignment.CenterHorizontally

@@ -1,4 +1,4 @@
-package com.rbnico.simplyteachingandroid.views
+package com.rbnico.simplyteachingandroid.view
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.isSystemInDarkTheme
@@ -27,8 +27,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.annotation.ExperimentalCoilApi
 import coil.compose.rememberImagePainter
-import com.rbnico.simplyteachingandroid.data.DataProvider
-import com.rbnico.simplyteachingandroid.data.User
+import com.rbnico.simplyteachingandroid.model.DataProvider
+import com.rbnico.simplyteachingandroid.model.User
 import com.rbnico.simplyteachingandroid.ui.theme.SimplyTeachingAndroidTheme
 @ExperimentalCoilApi
 @Composable
@@ -36,7 +36,7 @@ fun LoginView(
     loginOnClick : () -> Unit
 ) {
     val _user = remember { mutableStateOf("")}
-        var passwordVisibility: MutableState<Boolean> = remember { mutableStateOf(false)}
+        val passwordVisibility: MutableState<Boolean> = remember { mutableStateOf(false)}
 
     val _pass = remember { mutableStateOf("")}
     val logoString = if (isSystemInDarkTheme()) remember{
