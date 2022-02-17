@@ -15,17 +15,19 @@ public class StudentsRepository {
     MongoCollection<Document> collection;
 
     private void initCollection() {
-        collection = MongoUtility.getClient().getDatabase("simply-teaching").getCollection("students");
+        try {
+            collection = MongoUtility.getClient().getDatabase("simply-teaching").getCollection("students");
+        } catch (Exception ignored) {}
     }
 
     public List<Student> getAll() {
         initCollection();
 
         List<Student> students = new ArrayList<Student>();
-
-        for (Document d: collection.find()) {
-            students.add(toStudent(d));
-        }
+//
+//        for (Document d: collection.find()) {
+//            students.add(toStudent(d));
+//        }
 
         return students;
     }

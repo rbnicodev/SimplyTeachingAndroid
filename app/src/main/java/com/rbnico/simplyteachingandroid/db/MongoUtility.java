@@ -2,7 +2,9 @@ package com.rbnico.simplyteachingandroid.db;
 
 import android.annotation.SuppressLint;
 
-import com.mongodb.MongoClient;
+import com.mongodb.client.MongoClient;
+import com.mongodb.client.MongoClients;
+
 
 public class MongoUtility {
     private static MongoClient client;
@@ -13,7 +15,9 @@ public class MongoUtility {
     public static MongoClient getClient() {
         if(client==null)
         {
-            client = new MongoClient("mongodb+srv://sarumurm:12341234@cluster0.jmtpo.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", 27017);
+            try {
+                client = MongoClients.create("mongodb+srv://sarumurm:12341234@cluster0.jmtpo.mongodb.net:27017?retryWrites=true&w=majority");
+            } catch (Exception ignored) {}
         }
 
         return client;
