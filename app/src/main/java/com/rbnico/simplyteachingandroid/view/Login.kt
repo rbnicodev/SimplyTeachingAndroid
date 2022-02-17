@@ -91,7 +91,8 @@ fun LoginView(
         Button(
             {
                 UsersProvider.currentUser = User(_user.value, _pass.value)
-                loginOnClick()
+                if(_user.value == "ruben" && _pass.value == "1234")
+                    loginOnClick()
             },
             modifier = Modifier
                 .padding(35.dp)

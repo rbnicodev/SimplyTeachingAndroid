@@ -1,8 +1,15 @@
 package com.rbnico.simplyteachingandroid.model
 
+import android.widget.Toast
+import androidx.room.Room
+import com.rbnico.simplyteachingandroid.MainActivity
+import com.rbnico.simplyteachingandroid.dao.StudentsRepository
+import java.lang.Exception
+
 object StudentsProvider {
-    val studentsList: List<Student> = listOf(
-        Student(5, 
+    val repository:StudentsRepository = StudentsRepository()
+    var studentsList: List<Student> = listOf(
+        Student(
             "Jacinto",
             "Núñez",
             12,
@@ -27,7 +34,7 @@ object StudentsProvider {
             ),
             ""
         ),
-        Student(4,
+        Student(
             "Eustaquio",
             "Sáez",
             7,
@@ -35,7 +42,7 @@ object StudentsProvider {
             listOf(),
             ""
         ),
-        Student(3,
+        Student(
             "Eneldo",
             "Anacardo",
             6,
@@ -43,7 +50,7 @@ object StudentsProvider {
             listOf(),
             ""
         ),
-        Student(2,
+        Student(
             "Ovidio",
             "Sánchez",
             16,
@@ -51,7 +58,7 @@ object StudentsProvider {
             listOf(),
             ""
         ),
-        Student(1,
+        Student(
             "Nicasio",
             "Forever",
             12,
@@ -59,10 +66,16 @@ object StudentsProvider {
             listOf(),
             ""
         ),
-        Student(0, name = "Eladio", "", 9, 2, listOf(), "")
+        Student(name = "Eladio", "", 9, 2, listOf(), "")
     )
 
-    fun getAll(): List<Student> {return studentsList}
+
+
+
+    fun getAll(): List<Student> {
+        return studentsList
+    }
+
 
     lateinit var currentStudent: Student
 

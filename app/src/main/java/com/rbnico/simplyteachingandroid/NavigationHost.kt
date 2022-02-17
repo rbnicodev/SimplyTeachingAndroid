@@ -20,7 +20,9 @@ fun NavigationHost() {
     NavHost(navController = navController, startDestination = Destinations.LoginView.route){
         composable(Destinations.LoginView.route) {
             LoginView(
-                loginOnClick = {navController.navigate(Destinations.StudentsList.route)}
+                loginOnClick = {
+                    navController.navigate(Destinations.StudentsList.route)
+                }
             )
         }
         composable(Destinations.StudentsList.route) {
